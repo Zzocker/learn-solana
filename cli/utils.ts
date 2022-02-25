@@ -4,8 +4,8 @@ import {homedir} from 'os'
 import { readFileSync } from 'fs';
 
 export default class Utils{
-    static rup_url = 'https://api.testnet.solana.com';
-    static socket_url = 'wss://api.testnet.solana.com/';
+    static rup_url = 'https://api.devnet.solana.com';
+    static socket_url = 'wss://api.devnet.solana.com/';
     static keypath = join(homedir(),'.config','solana','id.json')
 
 

@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "playground" : "ts-node cli/playground.ts",
+    "playground": "ts-node cli/playground.ts",
     "build::hello-world": "cargo build-bpf --manifest-path=./programs/hello-world/Cargo.toml --bpf-out-dir=dist/program",
-    "deploy::hello-world" : "solana program deploy dist/program/hello_world.so",
-    "hello-world" : "ts-node cli/hello-world.ts"
+    "deploy::hello-world": "solana program deploy dist/program/hello_world.so",
+    "hello-world": "ts-node cli/hello-world.ts",
+    "build::transfer-lamports": "cargo build-bpf --manifest-path=./programs/transfer-lamports/Cargo.toml --bpf-out-dir=dist/program",
+    "deploy::transfer-lamports": "solana program deploy dist/program/transfer_lamports.so",
+    "transfer-lamports": "ts-node cli/transfer-lamports.ts"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +21,8 @@
     "typescript": "^4.5.5"
   },
   "dependencies": {
+    "@solana/buffer-layout": "^4.0.0",
+    "@solana/buffer-layout-utils": "^0.2.0",
     "@solana/web3.js": "^1.35.1"
   }
 }

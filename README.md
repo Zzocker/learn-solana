@@ -18,3 +18,16 @@ Simplest solana program in which program write message `Hello World` upon invoki
 - Compile Program : `npm run build::hello-world`
 - Deploy : `npm run deploy::hello-world`
 - Run the example : `npm run hello-world`
+
+## Transfer Lamports
+
+Point To Note:
+
+- Only a data account's owner can modify its data and debit lamports
+- Anyone is allowed to credit lamports to a data account
+- Rent
+    - Storing data on accounts costs SOL to maintain, and it is funded by what is called rent. If you maintain a minimum balance equivalent to 2 years of rent payments in an account, your account will be exempt from paying rent. You can retrieve rent by closing the account and sending the lamports back to your wallet.
+
+- Compile Program : `npm run build::transfer-lamports`
+- Deploy : `npm run deploy::transfer-lamports`
+- Run the example : `npm run transfer-lamports`
